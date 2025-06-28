@@ -1,0 +1,71 @@
+@font-face {
+  font-family: inter;
+  src: url("/assets/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+html {
+  font-family: inter, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Noto Color Emoji";
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body > * {
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #020e1c22;
+  color: white;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  gap: 1rem;
+}
+
+nav > .nav-sep {
+  flex-grow: 1;
+}
+
+nav > .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & > img {
+    height: 24px;
+  }
+}
+
+nav > a {
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.btn {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  background-color: lightslategray;
+  margin-block: 1rem;
+}
+
+.dlLink {
+  background-color: #c69685;
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+  &:hover {
+    opacity: 0.75;
+  }
+}
