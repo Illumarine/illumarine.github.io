@@ -3,6 +3,12 @@
   src: url("/assets/Inter-VariableFont_opsz\,wght.ttf");
 }
 
+:root {
+  --primary: #660e0e;
+  --secondary: #dedcff;
+  --accent: #5ce392;
+}
+
 html {
   font-family: inter, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Noto Color Emoji";
@@ -15,12 +21,12 @@ a {
   text-decoration: inherit;
 }
 
-body > * {
+body > *:not(.hero) {
   padding-inline: 2rem;
   padding-block: 1rem;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
   background-color: #020e1c22;
@@ -33,20 +39,21 @@ nav {
   gap: 1rem;
 }
 
-nav > .nav-sep {
+.nav > .nav-grow {
   flex-grow: 1;
 }
 
-nav > .nav-brand {
+.nav > .nav-brand {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-weight: 600;
   & > img {
-    height: 24px;
+    height: 35px;
   }
 }
 
-nav > a {
+.nav > a {
   opacity: 1;
   transition: opacity 500ms ease-out;
   &:hover {
@@ -55,14 +62,14 @@ nav > a {
 }
 
 .btn {
-  padding-inline: 0.75rem;
-  padding-block: 0.25rem;
-  background-color: lightslategray;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: var(--accent);
   margin-block: 1rem;
 }
 
-.dlLink {
-  background-color: #c69685;
+.btn-primary {
+  background-color: var(--primary);
   opacity: 1;
   transition: opacity 500ms ease-out;
   &:hover {

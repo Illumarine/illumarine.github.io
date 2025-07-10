@@ -1,14 +1,26 @@
 .hero {
-  display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background-image: linear-gradient(180deg, #020e1cff, #143a5dff, #3e526bff);
-  color: white;
+  display: flex;
   flex-direction: column;
+  background-image: url("/assets/Lighthouse.webp");
+  background-size: cover;
+  color: white;
+  & > .hero-content {
+    background-color: #2227;
+    padding-inline: 2rem;
+    padding-block: 2.5rem;
+    backdrop-filter: blur(5px);
+    & > h1 {
+      margin: 0;
+      & > .hero-em {
+        color: var(--accent);
+      }
+    }
+  }
 }
 
-.whatis-grid {
+.about-itemsgrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
@@ -16,5 +28,26 @@
     background-color: #ddd;
     padding-inline: 2rem;
     padding-block: 1rem;
+  }
+}
+
+.connect-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  & > a {
+    display: flex;
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    background-color: var(--secondary);
+    opacity: 1;
+    transition: opacity 500ms ease-out;
+    &:hover {
+      opacity: 0.75;
+    }
+    & > svg {
+      width: 24px;
+    }
   }
 }
